@@ -16,21 +16,85 @@ body {
 }
 
 .container {
-  /* padding : 40px; */
-
 }
 
-.main-text {
+.header-text {
   flex-direction: column;
   color: #FFF;
 }
 
-.sub-text {
+.header-sub-text {
   font-weight: 700;
 }
 
-.sub-text:hover {
+.header-sub-text:hover {
   color: #D66C44
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr); 
+  grid-template-rows: repeat(2,1fr);
+  gap: 40px;
+  justify-items: center;
+  max-width: max-content;
+  margin: 4vw auto 0
+}
+
+.image-container img {
+  width: 10rem;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+.result {
+  display: none;
+  margin-top: 3vw;
+  font-size: larger;
+  background-color: #FFF;
+  position: fixed;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+
+  width: 50vw;
+  max-width: 40vw;
+}
+
+.fortune-text {
+
+
+}
+
+.fortune-text {
+  display: none;
+  font-size: x-large;
+  color: #4A746A;
+}
+
+.tarot-loading {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease;
+  transform: rotate(0deg);
+}
+
+.tarot-loading.rotate {
+  opacity: 1;
+  transform: rotate(30deg);
+  transition: transform 2s ease;
 }
 
 ::selection {
