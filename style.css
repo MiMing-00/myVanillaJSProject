@@ -1,0 +1,36 @@
+html, body {
+  height: 100vh;
+}
+
+body {
+  background-image: url(./images/backgroundImage.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-color: black;
+}
+
+.container {
+  margin : 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-text {
+  flex-direction: column;
+  color: #FFF;
+}
+
+.sub-text {
+  font-weight: 700;
+}
+
+.sub-text:hover {
+  color:aqua
+}
+
+::selection {
+  background-color: cadetblue;
+  
+}
