@@ -12,11 +12,13 @@ function handleCardClick() {
   let result = document.querySelector('.result');
   let fortuneLoading = document.querySelector('.tarot-loading');
 
+  // reset
+  result.style.display = 'none';
   fortuneLoading.classList.add('rotate');
 
   setTimeout(() => {
     result.textContent = randomFortune;
-    fortuneLoading.style.display = 'none';
+    fortuneLoading.classList.remove('rotate');
     result.style.display = 'block';
   }, 2000);
 }
